@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.neon-text {
+    font-size: 2em;
+    color: #39ff14; /* Neon green color */
+    text-align: center;
+}
+
+#videoContainer {
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+#gifOne {
+    max-width: 100%;
+    height: auto;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.5em;
+}
+
+@keyframes neon {
+    0% { 
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #39ff14, 0 0 40px #39ff14, 0 0 50px #39ff14, 0 0 60px #39ff14, 0 0 70px #39ff14; 
+    }
+    50% {
+        text-shadow: none;
+    }
+    100% { 
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #39ff14, 0 0 40px #39ff14, 0 0 50px #39ff14, 0 0 60px #39ff14, 0 0 70px #39ff14; 
+    }
+}
+
+.neon-text {
+    color: #39ff14; /* neon green color */
+    font-size: 3em;
+    animation: neon 1s infinite alternate;
+}
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+    .neon-text {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
